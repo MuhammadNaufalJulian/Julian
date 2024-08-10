@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="assets/images/NJ-removebg-preview.png" type="image/x-icon">
+    <title>Julian Was Here</title>
+</head>
+
+<body>
+    <header>
+        <div id="head-switch-mode">
+            <div id="switch-mode" class="switch-mode">
+                <div id="switch-circle" class="switch-circle"></div>
+            </div>
+        </div>
+        
+
+
+        <div id="navbar-head">
+            <button class="navigation navigation-1" onclick="changeStyle(1); showSection('aboutMe')">About Me</button>
+            <button class="navigation navigation-2" onclick="changeStyle(2); showSection('my-projects')">My Projects</button>
+            <button class="navigation navigation-3" onclick="changeStyle(3); showSection('contack')">Contact</button>
+        </div>
+
+            <div class="rating">
+                
+                <h1 id="rate-star">R <br>a <br>t <br>e <br> <br>O <br>u <br>r <br> <br> W <br>e <br>b <br>s <br>i <br>t <br>e</h1>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+                <div class="average-rating" id="average-rating" title="Rating"></div>
+                <img  class="viewer" src="assets/images/viewer-removebg-preview.png" alt="viewer">
+                <div class="average-viewer" id="average-viewer" title="banyaknya pengunjung"></div>
+            </div>
+
+<div id="cooming-soon" style="display: none;">
+    <img src="assets/images/comment-removebg-preview.png" alt="comment" class="commented1"  onclick="openCommentDisplayOverlay()"> 
+        <!-- Overlay untuk menampilkan komentar -->
+    <div id="commentDisplayOverlay" class="overlay1">
+    <div class="overlay-content1">
+    <span class="close-btn1" onclick="closeCommentDisplayOverlay()">&times;</span>
+    <img src="assets/images/comment-removebg-preview.png" alt="comment" class="commented1"  onclick="openOverlay()">
+    <h2>Comments</h2>
+    <div id="comments-display" class="comments-display"></div>
+    </div>
+    </div>
+    
+    
+    <!--overlay untuk berkomentar-->
+    <div id="commentOverlay" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn" onclick="closeOverlay()">&times;</span>
+            <div class="comments-section">
+                <h2>Leave a Comment</h2>
+                <label for="user-name">Your Name:</label>
+                <input type="text" id="user-name" placeholder="Enter your name...">
+                <textarea id="comment-box" class="comment-box" rows="5" placeholder="Write your comment here..."></textarea>
+                <button class="submit-btn" onclick="submitComment()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>    
+
+        
+        </section>
+    </header>
+
+    <main id="main">
+        <section  id="landing-page">
+            <header>
+                <section>
+                    <h1 style="display: none;">MAIN SECTION</h1>
+                </section>
+            </header>
+
+            <main id="container-content">
+
+                <div id="data-diri">
+                    <h1 id="name">Muhammad <br> Naufal Julian</h1>
+                    <img class="profile" src="assets/images/muhammad naufal julian.jpg" alt="@naufalpal28_">
+                    <h2 id="role">Software Engineer</h2>
+                </div>
+
+                <div id="layout-sosmed">
+                    <div id="hello">
+                        <h1>Hello..., I am Ready To Everything</h1>
+                        <p>I am an informatics engineering student <br> living in Depok, West Java, Indonesia</p>
+                    </div>
+
+                    <div id="header-sosmed">
+                        <h1 id="h1-header-sosmed">My Social Media</h1>
+                    </div>
+
+                    <div id="my-sosmed">
+
+                        <div class="social-media">
+                            <img id="square-image1" onclick="instagram()" class="square-image" class="square-image" src="assets/images/logo instagram.webp" alt="Instagram">
+                            <div class="overlay">
+                                <div class="text">
+                                    <button>Click and follow me</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-media">
+                            <img id="square-image2" onclick="youtube()" class="square-image" class="square-image" src="assets/images/logo youtube.png" alt="Youtube">
+                            <div class="overlay">
+                                <div class="text">
+                                    <button>Click and Subscribe me</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-media">
+                            <img id="square-image3" onclick="tiktok()" class="square-image" class="square-image" src="assets/images/logo tiktok.webp" alt="Tiktok">
+                            <div class="overlay">
+                                <div class="text">
+                                    <button>Click and follow me</button>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="social-media">
+                            <img id="square-image4" onclick="linkedin()" class="square-image" src="assets/images/logo linkedin.png" alt="Linkedin">
+                            <div class="overlay">
+                                <div class="text">
+                                    <button>Click and add me</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+        <section id="aboutMe" style="display: none;">
+            <div id="row-1">
+                <div>
+                    <img class="profile-about-me" src="assets/images/profile.jpg" alt="Profile">
+                </div>
+
+                <div class="bio-row-1">
+                    <h2>Hello I'm</h2>
+                    <h1>MUHAMMAD <br> NAUFAL <br> JULIAN</h1>
+                    <h3>Born : 28/08/2004</h3>
+                    <h3>Weight : 56 lbs</h3>
+                    <h3>Height : 168 cm</h3>
+                </div>
+            </div>
+
+            <div class="container-row-2">
+                <div class="row-2">
+                    <div id="about-me">
+                        <h1>About Me</h1>
+                        <p>Halo! Saya Muhammad Naufal Julian, seorang mahasiswa di Universitas Indraprasta (Unindra) yang berdedikasi dan bersemangat dalam mengejar pendidikan dan pengembangan diri. Saat ini, saya sedang menempuh pendidikan di jurusan Teknik Informatika, di mana saya terus belajar dan mengasah keterampilan saya dalam bidang tersebut.
+                            Di luar studi akademis, saya memiliki minat yang luas dalam dunia teknologi, khususnya coding.</p>
+                        <p>Saya sering terlibat dalam kegiatan seperti seminar online dan kelas developer, yang saya ikuti secara mandiri. Melalui kegiatan ini, saya dapat mengembangkan diri lebih lanjut dan bertemu dengan banyak orang baru.</p>
+                        <p>Saya bercita-cita untuk menjadi seorang Software Engineer yang profesional. Dengan pendidikan dan pengalaman yang saya peroleh di Unindra, serta usaha mandiri di luar kampus, saya yakin dapat mencapai tujuan tersebut dan memberikan dampak positif bagi lingkungan sekitar.</p>
+                            <h6>Mari Terhubung!
+                                Saya selalu terbuka untuk berkenalan dengan orang-orang baru dan membangun jaringan. <br> Jangan ragu untuk menghubungi saya.</h6>
+                    </div>
+
+                    <div id="offside2">
+                        <h1 style="display: none;">p</h1>
+                        <h2 id="offside2-h2" >R <br>e <br>a <br>d <br> <br> <br> <br> <br>M <br>o <br>d <br>e</h2>
+                    </div>
+                    <div id="container-read-mode">
+                        <img class="read-mode-off" src="assets/images/book_close-removebg-preview.png" alt="close book" id="readModeButton">
+                        <img class="read-mode-on" src="assets/images/book_open-removebg-preview.png" alt="">
+                    </div>
+    <div id="readModeOverlay">
+        <div class="content">
+            <button id="closeButton">Close</button>
+            <h1> About Me</h1>
+            <p>Halo! Saya Muhammad Naufal Julian, seorang mahasiswa di Universitas Indraprasta (Unindra) yang berdedikasi dan bersemangat dalam mengejar pendidikan dan pengembangan diri. Saat ini, saya sedang menempuh pendidikan di jurusan Teknik Informatika, di mana saya terus belajar dan mengasah keterampilan saya dalam bidang tersebut.
+                Di luar studi akademis, saya memiliki minat yang luas dalam dunia teknologi, khususnya coding.</p> <br>
+            <p>Saya sering terlibat dalam kegiatan seperti seminar online dan kelas developer, yang saya ikuti secara mandiri. Melalui kegiatan ini, saya dapat mengembangkan diri lebih lanjut dan bertemu dengan banyak orang baru.</p> <br>
+            <p>Saya bercita-cita untuk menjadi seorang Software Engineer yang profesional. Dengan pendidikan dan pengalaman yang saya peroleh di Unindra, serta usaha mandiri di luar kampus, saya yakin dapat mencapai tujuan tersebut dan memberikan dampak positif bagi lingkungan sekitar.</p>
+            <h6>Mari Terhubung!
+                Saya selalu terbuka untuk berkenalan dengan orang-orang baru dan membangun jaringan. Jangan ragu untuk menghubungi saya.</h6>
+        </div>
+    </div>
+
+                    <div id="hire-me" class="hire">
+                        <Button  class=" shine" onclick="showSection('contack')">HIRE ME</Button>
+                    </div>
+                </div>
+                <div>
+                    <h1 id="call-me"><strong>Call Me Julian</strong></h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="my-projects" style="display: none;">
+            <div id="hire2" class="hire2">
+                <Button class="shine" onclick=" showSection('contack')">HIRE ME</Button>
+            </div>
+            <div  id="hr1">
+                <h1 style="display: none;">1</h1>
+            </div>
+            <div  id="hr2">
+                <h1 style="display: none;">2</h1>
+            </div>
+            <div>
+                <h1  id="projects">Ini adalah Portofoilo Project Yang Saya Buat</h1>
+            <div id="project-1">
+                <div class="head-projects">
+                    <h1 style="display: none;">Julian</h1>
+                    <h2>Project 1</h2>
+                </div>
+
+                <section class="cover-project">
+                    <h1 style="display: none;">COVER-END</h1>
+                </section>
+
+                <section class="cover-project-1">
+                    <h1 style="display: none;">CONTACT</h1>
+                </section>
+
+                <section class="cover-project-2">
+                    <h1 style="display: none;">PLAYGROUND</h1>
+                </section>
+
+                <section class="cover-project-3">
+                    <div style="display: none;">
+                    </div>
+                </section>
+
+                <section class="shadow-project">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+                <section class="shadow-project-2">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+            </div>
+
+            <div class="projects" id="project-2">
+                <div class="head-projects">
+                    <h1 style="display: none;">Julian</h1>
+                    <h2>Project 2</h2>
+                </div>
+
+                <section class="cover-project">
+                    <h1 style="display: none;">COVER-END</h1>
+                </section>
+
+                <section class="cover-project-1">
+                    <h1 style="display: none;">CONTACT</h1>
+                </section>
+
+                <section class="cover-project-2">
+                    <h1 style="display: none;">PLAYGROUND</h1>
+                </section>
+
+                <section class="cover-project-3">
+                    <div style="display: none;">
+                    </div>
+                </section>
+
+                <section class="shadow-project">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+                <section class="shadow-project-2">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+            </div>
+
+            <div class="projects" id="project-3">
+                <div class="head-projects">
+                    <h1 style="display: none;">Julian</h1>
+                    <h2>Project 3</h2>
+                </div>
+
+                <section class="cover-project">
+                    <h1 style="display: none;">COVER-END</h1>
+                </section>
+
+                <section class="cover-project-1">
+                    <h1 style="display: none;">CONTACT</h1>
+                </section>
+
+                <section class="cover-project-2">
+                    <h1 style="display: none;">PLAYGROUND</h1>
+                </section>
+
+                <section class="cover-project-3">
+                    <div style="display: none;">
+                    </div>
+                </section>
+
+                <section class="shadow-project">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+                <section class="shadow-project-2">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+            </div>
+
+            <div class="projects" id="project-4">
+                <div class="head-projects">
+                    <h1 style="display: none;">Julian</h1>
+                    <h2>Project 4</h2>
+                </div>
+
+                <section class="cover-project">
+                    <h1 style="display: none;">COVER-END</h1>
+                </section>
+
+                <section class="cover-project-1">
+                    <h1 style="display: none;">CONTACT</h1>
+                </section>
+
+                <section class="cover-project-2">
+                    <h1 style="display: none;">PLAYGROUND</h1>
+                </section>
+
+                <section class="cover-project-3">
+                    <div style="display: none;">
+                    </div>
+                </section>
+
+                <section class="shadow-project">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+                <section class="shadow-project-2">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+            </div>
+
+            <div class="projects" id="project-5">
+                <div class="head-projects">
+                    <h1 style="display: none;">Julian</h1>
+                    <h2>Project 5</h2>
+                </div>
+
+                <section class="cover-project">
+                    <h1 style="display: none;">COVER-END</h1>
+                </section>
+
+                <section class="cover-project-1">
+                    <h1 style="display: none;">CONTACT</h1>
+                </section>
+
+                <section class="cover-project-2">
+                    <h1 style="display: none;">PLAYGROUND</h1>
+                </section>
+
+                <section class="cover-project-3">
+                    <div style="display: none;">
+                    </div>
+                </section>
+
+                <section class="shadow-project">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+                <section class="shadow-project-2">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+            </div>
+
+            <div class="projects" id="project-6">
+                <div class="head-projects">
+                    <h1 style="display: none;">Julian</h1>
+                    <h2>Project 6</h2>
+                </div>
+
+                <section class="cover-project">
+                    <h1 style="display: none;">COVER-END</h1>
+                </section>
+
+                <section class="cover-project-1">
+                    <h1 style="display: none;">CONTACT</h1>
+                </section>
+
+                <section class="cover-project-2">
+                    <h1 style="display: none;">PLAYGROUND</h1>
+                </section>
+
+                <section class="cover-project-3">
+                    <div style="display: none;">
+                    </div>
+                </section>
+
+                <section class="shadow-project">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+
+                <section class="shadow-project-2">
+                    <h1 style="display: none;">shadow</h1>
+                </section>
+            </div>
+        </div>
+        </section>
+
+        <section id="contack" style="display: none;">
+            <div class="contack">
+                <div class="contack-head">
+                    <h1 id="h">Hello There</h1>
+                </div>
+
+                <div>
+                    <img id="head-image" src="assets/images/whatsapp bg.jpg" alt="default">
+                    <h1 id="head">CONTACT ME IF YOU ARE INTERESTED IN ME</h1>
+                </div>
+            <div id="whatsapp">
+                <h1 id="whatsapp-h1">Kirim Pesan WhatsApp</h1>
+                <form id="whatsappForm">
+
+                    <label id="choose" for="phoneNumber">Choose a Number</label>
+<select id="numbers" name="phoneNumberList" form="phoneNumberForm">
+  <option id="phoneNumber" value="6289628047497">Muhammad Naufal Julian</option>
+</select>
+                    <label id="choose2" for="message">Pesan:</label>
+                    <textarea id="message" rows="12" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                    <button id="btn-whatsapp" type="submit">Kirim Pesan</button>
+                </form> 
+            </div>
+            <div>
+                <h1 id="m"></h1>
+                <img class="pr animate" src="/assets/images/profile2-removebg-preview.png" alt="profile">
+            </div>
+
+            <div>
+                <h1 id="end-contack">Software Engineer</h1>
+            </div>
+        </div>
+        </section>
+
+    </main>
+
+    <footer id="skill">
+
+    </footer>
+
+    <section id="cover-end">
+        <h1 style="display: none;">COVER-END</h1>
+    </section>
+
+    <section id="cover-1">
+        <h1 style="display: none;">CONTACT</h1>
+    </section>
+
+    <section id="cover-2">
+        <h1 style="display: none;">PLAYGROUND</h1>
+    </section>
+
+    <section id="cover-3">
+        <div style="display: none;">
+        </div>
+    </section>
+
+    <section id="shadow">
+        <h1 style="display: none;">shadow</h1>
+    </section>
+
+    <section id="shadow2">
+        <h1 style="display: none;">shadow</h1>
+    </section>
+
+    <div>
+        <div id="offside">
+            <h1 style="display: none;">p</h1>
+        </div>
+        <div id="nj">
+            <img class="logo" onclick="showSection('landing-page')" src="assets/images/NJ-removebg-preview.png" alt="Naufal Julian">
+        </div>
+        <div id="container-language">
+            <div class="language">
+                <img  id="language" src="assets/images/language-removebg-preview.png" alt="language">
+            </div>
+            <div id="html">
+                <img class="html" src="assets/images/html-removebg-preview.png" alt="html">
+            </div>
+            <div id="css">
+                <img class="css" src="assets/images/css-removebg-preview.png" alt="css">
+            </div>
+            <div id="js">
+                <img class="js" src="assets/images/js-removebg-preview.png" alt="javascript">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer">
+            &copy; 2024 NJ MY PERSONAL WEBSITE. All rights reserved.
+        </div>
+    </footer>
+    <script src="assets/scripts.js"></script>
+</body>
+
+</html>
