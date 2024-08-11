@@ -3,6 +3,8 @@ body {
     background: grey;
     width: 100vh;
     height: 97vh;
+    transform: scale(1.2); /* 1.2 artinya 120% (20% lebih besar) */
+    transform-origin: 0 0; /* Mengatur titik asal zoom (dari kiri atas) */
 }
 
 /* BORDER */ 
